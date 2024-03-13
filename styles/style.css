@@ -19,14 +19,14 @@
 }
 
 .title-decor {
-  color: var(--title-decor-color);
-  background-color: var(--title-decor-bg-color);
+  color: var(--title-decor-color, #000028);
+  background-color: var(--title-decor-bg-color, #FF0070);
 }
 
 .page-title {
   font-size: var(--title-size-desktop, 157px);
   color: var(--header-title-color, #DB00FF);
-  text-shadow: 4px 4px 0 var(--accent-color);
+  text-shadow: 4px 4px 0 var(--accent-color, #FF0070);
   line-height: 82.5%;
   margin-left: -20px;
 }
@@ -84,7 +84,7 @@
 .bulb::before {
   content: "REC";
   color: var(--accent-color, #FF0070);
-  line-height: 25px;
+  line-height: 139%;
 }
 
 .bulb::after {
@@ -100,14 +100,14 @@
 .decorated-zone {
   position: relative;
   block-size: 100vh;
-  min-height: 768px;
+  min-block-size: 768px;
 }
 
 .decorated-zone::before {
   position: absolute;
   content: '';
-  border-top: 1px solid var(--decoration-rectangle-color);
-  border-right: 1px solid var(--decoration-rectangle-color);
+  border-top: 1px solid var(--decoration-rectangle-color, #FF0070);
+  border-right: 1px solid var(--decoration-rectangle-color, #FF0070);
   inline-size: 25px;
   block-size: 25px;
   inset-block-start: 20px;
@@ -117,8 +117,8 @@
 .decorated-zone::after {
   position: absolute;
   content: '';
-  border-bottom: 1px solid var(--decoration-rectangle-color);
-  border-left: 1px solid var(--decoration-rectangle-color);
+  border-bottom: 1px solid var(--decoration-rectangle-color, #FF0070);
+  border-left: 1px solid var(--decoration-rectangle-color, #FF0070);
   inline-size: 25px;
   block-size: 25px;
   inset-inline-start: 20px;
@@ -140,8 +140,9 @@
 .header__theme-menu-button {
   cursor: pointer;
   border: 0;
-  padding: 0 13px;
+  padding: 4px 13px;
   color: var(--font-color, #FF0070);
+  line-height: 100%;
   background-color: transparent;
   text-transform: lowercase;
 }
@@ -155,7 +156,7 @@
 }
 
 .header__theme-menu-button:focus-visible {
-  border-bottom: 1px solid var(--font-color);
+  border-bottom: 1px solid var(--font-color, #FF0070);
   outline: none;
 }
 
@@ -196,11 +197,10 @@
   padding: 40px 20px 60px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
 }
 
 .gallery__list {
-  margin-top: 10px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
@@ -217,6 +217,7 @@
 }
 
 .gallery__list-item-img {
+  display: block;
   object-fit: cover;
   object-position: center;
   inline-size: 100%;
@@ -231,6 +232,90 @@
 .footer__title {
   justify-self: center;
   align-self: center;
-  text-shadow: 2px 2px 0 var(--accent-color);
+  text-shadow: 2px 2px 0 var(--accent-color, #FF0070);
   margin: 0;
+}
+
+@media (max-width: 768px) {
+  .page-title {
+    font-size: var(--title-size-mobile, 120px);
+  }
+
+  .header__theme-menu {
+    align-self: center;
+    justify-self: end;
+  }
+
+  .header__theme-menu-list {
+    flex-direction: column;
+  }
+
+  .header__text {
+    max-inline-size: 364px;
+  }
+
+  .section-how__title {
+    max-inline-size: 236px;
+  }
+
+  .section-how__list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 540px) {
+  .decorated-zone {
+    min-block-size: 648px;
+  }
+
+  .decorated-zone::before {
+    inset-block-start: 10px;
+    inset-inline-end: 10px;
+  }
+
+  .decorated-zone::after {
+    inset-inline-start: 10px;
+    inset-block-end: 10px;
+  }
+
+  .bulb {
+    inset-inline-end: 20px;
+    inset-block-start: 10px;
+  }
+
+  .header {
+    padding: 10px;
+  }
+
+  .page-title {
+    margin: 0;
+  }
+
+  .section {
+    padding: 50px 10px 0;
+    grid-template-columns: 1fr;
+  }
+
+  .section-why {
+    padding-top: 40px;
+  }
+
+  .section-how__title {
+    max-inline-size: 335px;
+  }
+
+  .gallery {
+    padding: 50px 10px 40px;
+    gap: 10px;
+  }
+
+  .gallery__list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer {
+    padding: 10px;
+  }
 }
