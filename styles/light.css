@@ -9,4 +9,23 @@
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
+  --font-color: #353430;
+  --background-image: url(../images/cover-image-light.png);
+  --accent-color: #FF8DCB;
+  --title-decor-color: var(--font-color);
+  --title-decor-bg-color: var(--accent-color);
+  --header-title-color: #FFC2E6;
+  --text-color: var(--font-color);
+  --button-outline-color: rgba(50, 49, 45, 0.4);
+  --link-focus-color: var(--font-color);
+  --font-family: 'IBM Plex Mono';
+  --font-size: 18px;
+  --line-height: 23.4px;
+  --title-color: var(--font-color);
+  --title-size-mobile: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  --title-size-desktop: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  --decoration-rectangle-color: var(--font-color);
+  --font-regular: 400;
+  --font-bold: 700;
+  --display: none;
 }
