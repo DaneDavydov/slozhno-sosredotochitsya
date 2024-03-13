@@ -2,9 +2,10 @@
 
 .page {
   color: var(--text-color, #F1B2CE);
-  font-family: var(--font-family, sans-serif);
+  font-family: var(--font-family, monospace);
   font-size: var(--font-size, 18px);
   background-image: var(--background-image);
+  background-color: var(--bg-color);
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -59,6 +60,10 @@
   grid-template-columns: clamp(236px, calc(100% / 3.12), 315px) 1fr;
 }
 
+.section__list {
+  margin-top: 20px;
+}
+
 .section__list-item {
   margin-bottom: 20px;
 }
@@ -82,9 +87,10 @@
 }
 
 .bulb::before {
-  content: "REC";
+  content: "rec";
   color: var(--accent-color, #FF0070);
   line-height: 139%;
+  text-transform: uppercase;
 }
 
 .bulb::after {
