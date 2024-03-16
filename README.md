@@ -9,3 +9,6 @@
 
 # Сылка на репозиторий проекта
 https://github.com/DaneDavydov/slozhno-sosredotochitsya
+
+# Привер работы:
+https://danedavydov.github.io/slozhno-sosredotochitsya/
