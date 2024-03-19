@@ -7,7 +7,7 @@
 - CSS(Flexbox + Grid)
 - БЭМ
 
-# Сылка на репозиторий проекта
+# Ссылка на репозиторий проекта
 https://github.com/DaneDavydov/slozhno-sosredotochitsya
 
 # Привер работы:
