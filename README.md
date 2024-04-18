@@ -10,5 +10,5 @@
 # Ссылка на репозиторий проекта
 https://github.com/DaneDavydov/slozhno-sosredotochitsya
 
-# Привер работы:
+# Пример работы:
 https://danedavydov.github.io/slozhno-sosredotochitsya/
